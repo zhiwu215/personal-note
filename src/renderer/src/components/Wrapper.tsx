@@ -4,6 +4,7 @@ import {
   ResizablePanel,
   ResizablePanelGroup
 } from '@renderer/components/ui/resizable'
+import { WindowButtons } from './SharedComponents'
 
 export default React.memo(() => {
   return (
@@ -14,7 +15,9 @@ export default React.memo(() => {
         </ResizablePanel>
         <ResizableHandle />
         <ResizablePanel minSize="30%">
-          <div className="h-[40px] px-2 w-[100%] border-b-[.5px] border-b-stone-300 dark:border-b-stone-800 app-dragger flex justify-center"></div>
+          <div className="h-[40px] px-2 w-[100%] border-b-[.5px] border-b-stone-300 dark:border-b-stone-800 app-dragger flex justify-end">
+            {!window.navigator.userAgent.toLowerCase().includes('mac') && <WindowButtons />}
+          </div>
         </ResizablePanel>
       </ResizablePanelGroup>
     </div>

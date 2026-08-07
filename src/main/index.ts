@@ -27,6 +27,19 @@ function createWindow(): void {
     return { action: 'deny' }
   })
 
+  // macos 才显示窗口左侧三个按钮
+  process.platform == 'darwin' && mainWindow.setWindowButtonVisibility(true)
+
+  ipcMain.on('close-app', () => {
+    mainWindow.close()
+  })
+  ipcMain.on('maximize-app', () => {
+    mainWindow.isMaximized() ? mainWindow.unmaximize() : mainWindow.maximize()
+  })
+  ipcMain.on('minimize-app', () => {
+    mainWindow.minimize()
+  })
+
   // HMR for renderer base on electron-vite cli.
   // Load the remote URL for development or the local html file for production.
   if (is.dev && process.env['ELECTRON_RENDERER_URL']) {
