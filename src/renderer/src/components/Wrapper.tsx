@@ -10,11 +10,11 @@ export default React.memo(() => {
     <div className="h-screen w-full">
       <ResizablePanelGroup orientation="horizontal">
         <ResizablePanel minSize="30%" defaultSize="35%">
-          <div className="h-[40px] w-[100%] border-b-[.5px] border-b-stone-300 dark:border-b-stone-800 flex justify-center"></div>
+          <div className="h-[40px] w-[100%] border-b-[.5px] border-b-stone-300 dark:border-b-stone-800 app-dragger flex justify-center"></div>
         </ResizablePanel>
         <ResizableHandle />
         <ResizablePanel minSize="30%">
-          <div className="h-[40px] px-2 w-[100%] border-b-[.5px] border-b-stone-300 dark:border-b-stone-800 flex justify-center"></div>
+          <div className="h-[40px] px-2 w-[100%] border-b-[.5px] border-b-stone-300 dark:border-b-stone-800 app-dragger flex justify-center"></div>
         </ResizablePanel>
       </ResizablePanelGroup>
     </div>

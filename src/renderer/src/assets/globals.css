@@ -123,3 +123,9 @@
     @apply bg-background text-foreground;
   }
 }
+
+/* Electron 窗口拖拽区域 */
+.app-dragger {
+  user-select: none;
+  -webkit-app-region: drag;
+}
