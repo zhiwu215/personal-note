@@ -1,7 +1,7 @@
 // zust-store.ts
 import { create } from 'zustand'
 import { persist } from 'zustand/middleware'
-import { IMainState } from './types'
+import { IMainState } from '../../../shared/types'
 
 // import type {} from '@redux-devtools/extension' // required for devtools typing
 
